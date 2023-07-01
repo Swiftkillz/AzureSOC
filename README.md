@@ -32,25 +32,30 @@ For the "BEFORE" metrics, all resources were originally deployed, exposed to the
 For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
 
 ## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+<b>NSG Malicious flows allowed</b>![nsg-malicious-allowed-in](https://github.com/Swiftkillz/AzureSOC/assets/100171037/c6ff397c-2f65-470a-853f-96d3e214f83c)
+
+<br><b>Windows RDP Authentication Failures</b>![windows-rdp-auth-fail](https://github.com/Swiftkillz/AzureSOC/assets/100171037/32a3a434-0fc0-40be-b977-eecb400ed28d)
+
+<b>Linux Syslog Authentication Failures</b>![Linux Syslog Auth Failures](https://github.com/Swiftkillz/AzureSOC/assets/100171037/ec91c2c9-5572-4e97-a570-cad734b9e818)
+
+<b>Microsoft SQL Server Authentication failures</b>![Mircosoft SQL Auth Fails](https://github.com/Swiftkillz/AzureSOC/assets/100171037/e3892ea1-8d94-47a2-958d-7c1f0f11220e)
+<br>
 
 ## Metrics Before Hardening / Security Controls
 
 The following table shows the metrics we measured in our insecure environment for 24 hours:
-Start Time 2023-03-15 17:04:29
-Stop Time 2023-03-16 17:04:29
+Start Time 6/26/2023 19:09:31
+Stop Time 6/27/2023 19:09:31
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 19470
-| Syslog                   | 3028
-| SecurityAlert            | 10
-| SecurityIncident         | 348
-| AzureNetworkAnalytics_CL | 843
+| SecurityEvent            | 18595
+| Syslog                   | 10820
+| SecurityAlert            | 9
+| SecurityIncident         | 482
+| AzureNetworkAnalytics_CL | 1375
 
-## Attack Maps Before Hardening / Security Controls
+## Attack Maps After Hardening / Security Controls
 
 ```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
 
@@ -64,7 +69,7 @@ Stop Time	2023-03-19 15:37
 | ------------------------ | -----
 | SecurityEvent            | 8778
 | Syslog                   | 25
-| SecurityAlert            | 0
+| SecurityAlert            | 3
 | SecurityIncident         | 0
 | AzureNetworkAnalytics_CL | 0
 
